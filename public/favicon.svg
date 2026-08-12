@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="4" fill="#201d17"/>
+  <rect x="4" y="4" width="56" height="56" rx="2" fill="#f4f1ea" stroke="#201d17" stroke-width="2"/>
+  <text x="32" y="46" font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="42" fill="#9c2b22" text-anchor="middle">K</text>
+</svg>

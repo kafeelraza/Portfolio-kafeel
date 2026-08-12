@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kafeel Raza — Backend & Blockchain Developer Gazette</title>
+  
+  <!-- Premium Editorial Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="paper-theme">
+
+  <!-- Grain Texture Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Editorial Cursor -->
+  <div id="custom-cursor" class="custom-cursor">
+    <span class="cursor-text">CRUSH</span>
+  </div>
+
+  <!-- SVG REAL PAPER CRUMPLE & WARP DISPLACEMENT FILTER -->
+  <svg class="svg-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+    <defs>
+      <filter id="paper-crumple-filter" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="4" result="noise" />
+        <feDisplacementMap id="crumple-displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Top Fixed Editorial Header Bar (52px) -->
+  <header class="newspaper-header">
+    <div class="header-top-bar">
+      <div class="header-left">
+        <div class="menu-toggle-btn" id="menu-btn" role="button" aria-label="Toggle Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+        <span class="paper-brand-subtitle" id="masthead-brand">THE KAFEEL RAZA GAZETTE</span>
+      </div>
+      <div class="masthead-right">
+        <span class="edition-location" id="masthead-location">BAREILLY, UTTAR PRADESH</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport (100vh Fill) -->
+  <main class="newspaper-viewport">
+
+    <!-- Left Main Editorial Column / Stage -->
+    <section class="main-editorial-panel" id="main-panel">
+      
+      <!-- Paper Crease Lighting Overlay during Crumple -->
+      <div class="paper-crease-shadow" id="paper-crease-overlay"></div>
+      
+      <!-- ===================================================================
+           1. INTRO & BIOGRAPHY SECTION (FIRST VIEW ON LOAD)
+           =================================================================== -->
+      <div class="intro-section-wrapper" id="intro-section">
+        
+        <!-- Big Editorial Headline & Portrait Layout -->
+        <div class="hero-block">
+          <div class="featured-headline-wrap">
+            <div class="headline-box black-tile">KAFEEL</div>
+            <div class="headline-box-row">
+              <div class="headline-box black-tile">RAZA</div>
+              
+              <!-- Postage Stamp Element -->
+              <div class="postage-stamp" id="postage-stamp">
+                <div class="stamp-inner">
+                  <div class="stamp-sunburst-wrap">
+                    <svg class="stamp-sunburst-svg" viewBox="0 0 100 100" fill="none">
+                      <circle cx="50" cy="80" r="32" stroke="#E25822" stroke-width="2.5" stroke-dasharray="3 3"/>
+                      <path d="M50 48 L50 15 M50 48 L32 20 M50 48 L68 20 M50 48 L18 32 M50 48 L82 32 M50 48 L12 48 M50 48 L88 48" stroke="#E25822" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <div class="stamp-details">
+                    <div class="stamp-sig" id="stamp-sig">Kafeel Raza</div>
+                    <div class="stamp-date" id="stamp-date">2026/2027</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role Banner & Clickable Meta Links Bar -->
+        <div class="intro-meta-bar">
+          <span class="role-badge-tag">BACKEND & BLOCKCHAIN DEVELOPER</span>
+          <span class="location-tag">📍 BAREILLY, UTTAR PRADESH</span>
+          <a href="mailto:kafeelraza55@gmail.com" class="meta-link-tag">✉️ kafeelraza55@gmail.com</a>
+          <a href="tel:+916395533990" class="meta-link-tag">📞 +91 63955 33990</a>
+          <a href="https://github.com/kafeelraza" target="_blank" rel="noopener" class="meta-link-tag">💻 GITHUB: kafeelraza</a>
+          <a href="https://linkedin.com/in/kafeelraza" target="_blank" rel="noopener" class="meta-link-tag">💼 LINKEDIN: kafeelraza</a>
+          <a href="file:///C:/Users/kafee/OneDrive/Desktop/Kafeel_Raza_Resume_TeamFlow.pdf" target="_blank" rel="noopener" class="meta-link-tag highlight-resume-link">📄 RESUME PDF</a>
+        </div>
+
+        <!-- HERO INTRO BIOGRAPHY WITH KAFEEL PORTRAIT PHOTO -->
+        <div class="hero-bio-grid">
+          
+          <!-- Editorial Bio Paragraph -->
+          <div class="hero-bio-paragraph">
+            <p><span class="drop-cap" id="hero-dropcap">C</span><span id="hero-biotext">omputer Science student focused on backend and blockchain development, with hands-on experience building MERN applications, production-ready SaaS features, and Ethereum smart-contract systems. Comfortable developing REST APIs, authentication flows, MVC-based applications, and Web3 integrations. Seeking a software engineering, backend, or blockchain internship.</span></p>
+          </div>
+
+          <!-- KAFEEL RAZA EDITORIAL PORTRAIT CARD -->
+          <div class="editor-portrait-card">
+            <div class="portrait-frame-inner">
+              <img src="/kafeel-portrait.jpg" alt="Kafeel Raza — Backend & Blockchain Developer" class="editor-portrait-img" />
+              <div class="portrait-caption-tag">
+                <span class="caption-name">KAFEEL RAZA</span>
+                <span class="caption-role">EDITOR & DEVELOPER — BAREILLY</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION: TECHNICAL SKILLS MATRIX -->
+        <section class="editorial-new-section">
+          <div class="section-editorial-header">
+            <h3 class="section-title-large">TECHNICAL SKILLS MATRIX</h3>
+            <span class="section-volume-tag">SECTION 01 — STACK & TOOLS</span>
+          </div>
+
+          <div class="skills-matrix-grid">
+            <div class="matrix-box">
+              <h4 class="matrix-title">LANGUAGES & FOUNDATIONS</h4>
+              <ul class="matrix-list">
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>Solidity (Smart Contracts)</li>
+                <li>C Programming</li>
+                <li>Data Structures & Algorithms</li>
+              </ul>
+            </div>
+            
+            <div class="matrix-box">
+              <h4 class="matrix-title">BACKEND & APIS</h4>
+              <ul class="matrix-list">
+                <li>Node.js & Express.js</li>
+                <li>NestJS Framework</li>
+                <li>RESTful API Design</li>
+                <li>MVC Architecture</li>
+                <li>JWT Auth & Refresh Tokens</li>
+                <li>Swagger API Docs</li>
+              </ul>
+            </div>
+
+            <div class="matrix-box">
+              <h4 class="matrix-title">BLOCKCHAIN & WEB3</h4>
+              <ul class="matrix-list">
+                <li>Ethereum Ecosystem</li>
+                <li>Polygon Network</li>
+                <li>Smart Contracts</li>
+                <li>Web3.js Integration</li>
+                <li>Wallet Integration</li>
+              </ul>
+            </div>
+
+            <div class="matrix-box">
+              <h4 class="matrix-title">DATABASES & TOOLING</h4>
+              <ul class="matrix-list">
+                <li>PostgreSQL & Prisma ORM</li>
+                <li>MongoDB & Mongoose</li>
+                <li>Git & GitHub Workflows</li>
+                <li>Postman & VS Code</li>
+                <li>Cloudinary & Vercel/Render</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION: OPEN SOURCE & EDUCATION -->
+        <section class="editorial-new-section">
+          <div class="section-editorial-header">
+            <h3 class="section-title-large">EXPERIENCE & EDUCATION</h3>
+            <span class="section-volume-tag">SECTION 02 — CHRONICLE</span>
+          </div>
+
+          <div class="experience-timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">OPEN SOURCE</span>
+              <h4 class="timeline-role">Contributor — ethereum.org</h4>
+              <div class="timeline-company">ETHEREUM FOUNDATION ECOSYSTEM | GITHUB: KAFEELRAZA</div>
+              
+              <!-- GitHub Open Source Visual Badge Box -->
+              <div class="os-visual-badge-card">
+                <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1000&auto=format&fit=crop&q=80" alt="GitHub Open Source Code Contributions" class="os-card-img" />
+                <div class="os-card-overlay">
+                  <div class="os-github-tag">🐙 GITHUB OPEN SOURCE</div>
+                  <div class="os-pr-links">
+                    <a href="https://github.com/ethereum/ethereum-org-website/pull/18196" target="_blank" class="os-pr-badge">PR #18196 (Merged) ↗</a>
+                    <a href="https://github.com/ethereum/ethereum-org-website/pull/18189" target="_blank" class="os-pr-badge">PR #18189 (Merged) ↗</a>
+                    <a href="https://github.com/ethereum/ethereum-org-website/pull/18284" target="_blank" class="os-pr-badge">PR #18284 (Review) ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <p class="timeline-desc">
+                • Authored 2 merged pull requests in ethereum/ethereum-org-website.<br/>
+                • Centralized site-title suffix in metadata across 14 files (<a href="https://github.com/ethereum/ethereum-org-website/pull/18196" target="_blank" class="editorial-link">PR #18196 ↗</a>).<br/>
+                • Added Stylus to official Rust resources (<a href="https://github.com/ethereum/ethereum-org-website/pull/18189" target="_blank" class="editorial-link">PR #18189 ↗</a>).<br/>
+                • Proposed Netlify Edge Function Integration for Matomo AI traffic tracking (<a href="https://github.com/ethereum/ethereum-org-website/pull/18284" target="_blank" class="editorial-link">PR #18284 ↗</a>).
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-year">2023 — 2027 (EXPECTED)</span>
+              <h4 class="timeline-role">B.Tech in Computer Science & Information Technology</h4>
+              <div class="timeline-company">MAHATMA JYOTIBA PHULE ROHILKHAND UNIVERSITY (MJPRU), BAREILLY</div>
+              <p class="timeline-desc">
+                Final-year Computer Science student focusing on backend architecture and Web3 smart contracts.<br/>
+                <strong>Achievement:</strong> Secured 1st position in C Programming Workshop at MJPRU.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action Banner to Explore Work -->
+        <div class="work-section-prompt-banner">
+          <div class="prompt-dashed-box">
+            <span class="prompt-tag">PROJECT GAZETTE</span>
+            <h3 class="prompt-title">EXPLORE FEATURED PROJECTS WITH LIVE LINKS</h3>
+            <p class="prompt-desc">Click any vertical spine column on the right side to crush the current paper page and un-crumple TeamFlow SaaS, Legacy Vault, or Ethereum.org Open Source contributions!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           2. ACTIVE WORK / PROJECT SHOWCASE PANEL (TRIGGERED ON SPINE CLICK)
+           =================================================================== -->
+      <div class="project-showcase-container hidden" id="project-showcase">
+        
+        <!-- Category & Title Banner -->
+        <div class="project-meta-header">
+          <div class="category-badges">
+            <span class="badge-pill" id="proj-cat-1">NESTJS</span>
+            <span class="badge-pill" id="proj-cat-2">POSTGRESQL</span>
+          </div>
+          <h1 class="active-project-hero-title" id="active-proj-title">TEAMFLOW SAAS</h1>
+        </div>
+
+        <!-- Project Intro Summary -->
+        <p class="active-project-summary" id="active-proj-summary">
+          Multi-Tenant Project Management Platform built with NestJS, React, TypeScript, Prisma, and PostgreSQL.
+        </p>
+
+        <!-- Torn Paper Mask Edge (Screenshot 3) -->
+        <div class="torn-paper-mask-wrapper">
+          <svg class="torn-paper-edge-path" viewBox="0 0 1400 80" preserveAspectRatio="none">
+            <path d="M0,0 L1400,0 L1400,25 Q1350,55 1300,20 Q1240,65 1180,30 Q1120,70 1050,15 Q980,60 900,25 Q820,65 740,20 Q660,60 580,15 Q500,65 420,25 Q340,70 260,20 Q180,65 100,25 Q40,60 0,30 Z" fill="#0f0f0f"/>
+          </svg>
+        </div>
+
+        <!-- Dark Media Container -->
+        <div class="project-media-wrapper">
+          <img id="active-proj-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&auto=format&fit=crop&q=80" alt="Project Visual Preview" class="project-media-img" />
+          <div class="media-vignette"></div>
+        </div>
+
+        <!-- "THE WORK STORY" Editorial Box (Screenshot 4) -->
+        <div class="work-story-box" id="work-story-section">
+          <div class="dashed-box-outline">
+            <div class="work-story-header">
+              <div class="work-story-title-group">
+                <span class="story-kicker">CASE STUDY</span>
+                <h2 class="work-story-title">THE WORK STORY</h2>
+              </div>
+              
+              <!-- Mini Stamp inside Story Box -->
+              <div class="mini-stamp">
+                <div class="mini-stamp-icon">⚡</div>
+                <div class="mini-stamp-sig" id="mini-stamp-sig">Kafeel Raza</div>
+                <div class="mini-stamp-date" id="mini-stamp-date">2026/2027</div>
+              </div>
+            </div>
+
+            <p class="story-narrative-text" id="active-story-text">
+              Integrated Neon PostgreSQL, Prisma migrations, Render API deployment, Vercel frontend deployment, Cloudinary uploads, CORS, health/readiness checks, and Swagger API docs. Implemented email verification and forgot-password flows with validation, rate limiting, and automated unit/e2e test coverage.
+            </p>
+
+            <!-- Action Buttons: Live Site & Code Repo -->
+            <div class="story-actions">
+              <a href="https://teamflow.dareel.online/" target="_blank" rel="noopener" id="live-site-btn" class="oval-btn live-site-btn">
+                <span>LIVE DEMO SITE ↗</span>
+                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+              
+              <a href="https://github.com/kafeelraza" target="_blank" rel="noopener" id="github-btn" class="oval-btn github-btn">
+                <span>GITHUB REPO ↗</span>
+                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to Intro Button -->
+        <button class="oval-btn back-intro-btn" id="back-to-intro-btn" style="margin-bottom: 36px;">
+          <span>← UN-CRUMPLE TO INTRO & RESUME</span>
+        </button>
+
+      </div>
+
+      <!-- CORRESPONDENCE & INTERACTIVE CONTACT -->
+      <section class="editorial-new-section">
+        <div class="section-editorial-header">
+          <h3 class="section-title-large">CORRESPONDENCE & INQUIRIES</h3>
+          <span class="section-volume-tag">SECTION 03 — CONTACT</span>
+        </div>
+
+        <form class="classifieds-form" onsubmit="event.preventDefault(); alert('Thank you! Your message to Kafeel Raza has been dispatched.');">
+          <div class="form-group">
+            <input type="text" placeholder="YOUR NAME / ORGANISATION" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="YOUR EMAIL ADDRESS" required />
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="MESSAGE / INTERNSHIP OFFER DETAILS..." required></textarea>
+          </div>
+          <button type="submit" class="oval-btn" style="align-self: flex-start;">
+            <span>DISPATCH TO KAFEEL</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- Editorial Classifieds Footer -->
+      <footer class="editorial-classifieds">
+        <div class="classifieds-grid">
+          <div class="classified-col">
+            <h4 class="classified-head">CLASSIFIED ADS & OPPORTUNITIES</h4>
+            <p>SEEKING SOFTWARE ENGINEERING, BACKEND, OR BLOCKCHAIN INTERNSHIP. COMFORTABLE WITH MERN, NESTJS & WEB3.</p>
+          </div>
+          <div class="classified-col">
+            <h4 class="classified-head">DIRECT CORRESPONDENCE & LINKS</h4>
+            <p>EMAIL: <a href="mailto:kafeelraza55@gmail.com" id="footer-email" class="editorial-link">kafeelraza55@gmail.com</a></p>
+            <p>PHONE: +91 63955 33990 | BAREILLY, UTTAR PRADESH</p>
+            <p>GITHUB: <a href="https://github.com/kafeelraza" target="_blank" class="editorial-link">github.com/kafeelraza ↗</a></p>
+            <p>LINKEDIN: <a href="https://linkedin.com/in/kafeelraza" target="_blank" class="editorial-link">linkedin.com/in/kafeelraza ↗</a></p>
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+    <!-- Right Vertical Rotated Column Spines Sidebar (Fixed 340px Width) -->
+    <aside class="vertical-spines-sidebar" id="spines-sidebar">
+      <!-- Generated via spineAccordion.js -->
+    </aside>
+
+  </main>
+
+  <!-- Ripped Paper Navigation Drawer Overlay -->
+  <div class="ripped-paper-nav-drawer" id="nav-drawer">
+    <button class="drawer-close-btn" id="drawer-close-btn">✕ CLOSE</button>
+    <div class="drawer-inner-content">
+      <div class="drawer-newspaper-masthead">
+        <h2>THE KAFEEL RAZA GAZETTE</h2>
+        <span class="drawer-date">INDEX OF PROJECTS & RESUME</span>
+      </div>
+
+      <nav class="drawer-menu-list" id="drawer-menu-list">
+        <!-- Links dynamically generated -->
+      </nav>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
