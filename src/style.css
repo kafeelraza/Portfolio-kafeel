@@ -1,5 +1,5 @@
 /* ==========================================================================
-   KAFEEL RAZA PAPER PORTFOLIO — EDITORIAL PORTRAIT & HIGH READABILITY SYSTEM
+   KAFEEL RAZA PAPER PORTFOLIO — FULLY RESPONSIVE MOBILE & TOUCH SYSTEM
    ========================================================================== */
 
 :root {
@@ -22,7 +22,7 @@
   --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Reset & 100vh Constraints */
+/* Reset & Mobile Constraints */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -83,6 +83,13 @@ html, body {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+/* Disable Custom Cursor on Touch Devices */
+@media (hover: none) or (pointer-events: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 /* Header Bar Fixed Top Height (54px) */
@@ -293,7 +300,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-/* Intro Contact & Meta Strip */
+/* High Readability Intro Contact & Meta Strip */
 .intro-meta-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1072,41 +1079,79 @@ html, body {
   display: none !important;
 }
 
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 1100px) {
-  .hero-bio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .editor-portrait-card {
-    justify-self: center;
-    width: 100%;
-    max-width: 320px;
-  }
-}
+/* ==========================================================================
+   COMPREHENSIVE MOBILE & TOUCH RESPONSIVE BREAKPOINTS (SMARTPHONES & TABLETS)
+   ========================================================================== */
 
 @media (max-width: 1024px) {
+  html, body {
+    height: 100%;
+    max-height: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .newspaper-header {
+    height: 50px;
+    padding: 10px 16px 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .paper-brand-subtitle {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .edition-location {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
   .newspaper-viewport {
     flex-direction: column;
     height: auto;
-    overflow-y: auto;
+    min-height: calc(100vh - 50px);
+    overflow: visible;
+    background-color: var(--bg-paper);
   }
   
+  /* Horizontal Project Spines Navigation Bar at Top of Viewport */
   .vertical-spines-sidebar {
     width: 100%;
-    height: 120px;
-    min-height: 120px;
-    flex: 0 0 120px;
+    height: 60px;
+    min-height: 60px;
+    flex: 0 0 60px;
     overflow-x: auto;
+    overflow-y: hidden;
     border-left: none;
-    border-top: 1.5px solid var(--border-ink);
+    border-bottom: 2px solid var(--border-ink);
+    border-top: 1px solid var(--border-ink);
+    position: sticky;
+    top: 50px;
+    z-index: 800;
+    background-color: var(--bg-paper);
+    -webkit-overflow-scrolling: touch;
   }
 
   .spine-column {
-    width: 160px;
-    height: 120px;
-    min-height: 120px;
-    padding: 12px;
+    width: auto;
+    min-width: 150px;
+    height: 60px;
+    min-height: 60px;
+    padding: 8px 16px;
+    border-right: 1.5px solid var(--border-ink);
+    border-bottom: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .spine-column.active {
+    flex-grow: 1;
+    background-color: #c0b9ab;
   }
 
   .spine-title-wrap, .spine-badge {
@@ -1116,29 +1161,154 @@ html, body {
   }
 
   .spine-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .spine-badge {
+    font-size: 10px;
+  }
+
+  .main-editorial-panel {
+    height: auto;
+    overflow: visible;
+    padding: 28px 24px;
+    box-shadow: none;
+  }
+
+  .hero-bio-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .editor-portrait-card {
+    justify-self: center;
+    width: 100%;
+    max-width: 320px;
   }
 }
 
 @media (max-width: 640px) {
   .main-editorial-panel {
-    padding: 24px 16px;
+    padding: 20px 14px;
   }
 
   .black-tile {
-    font-size: 2.8rem;
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
     padding: 8px 16px;
+    letter-spacing: -1px;
+  }
+
+  .postage-stamp {
+    width: 110px;
+    height: 130px;
+  }
+
+  .stamp-sunburst-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stamp-sig {
+    font-size: 14px;
+  }
+
+  .intro-meta-bar {
+    gap: 10px;
+    font-size: 11px;
+    padding: 12px 0;
+  }
+
+  .role-badge-tag, .location-tag, .meta-link-tag, .highlight-resume-link {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .hero-bio-paragraph p {
+    font-size: 1.35rem;
+    line-height: 1.5;
+  }
+
+  .drop-cap {
+    font-size: 4rem;
+    line-height: 0.8;
+    padding-right: 10px;
+  }
+
+  .editor-portrait-card {
+    max-width: 260px;
+    padding: 8px;
+  }
+
+  .editor-portrait-img {
+    height: 270px;
+  }
+
+  .active-project-hero-title {
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    letter-spacing: -1px;
+  }
+
+  .active-project-summary {
+    font-size: 1.2rem;
   }
 
   .project-media-wrapper {
-    height: 320px;
+    height: 260px;
   }
 
   .dashed-box-outline {
-    padding: 20px;
+    padding: 20px 14px;
+  }
+
+  .work-story-title {
+    font-size: 2.2rem;
+  }
+
+  .story-narrative-text {
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+
+  .story-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .oval-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 14px;
   }
 
   .os-visual-badge-card {
-    height: 180px;
+    height: 160px;
+  }
+
+  .os-pr-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .os-pr-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .section-title-large {
+    font-size: 1.8rem;
+  }
+
+  .matrix-box {
+    padding: 16px;
+  }
+
+  .timeline-role {
+    font-size: 1.4rem;
+  }
+
+  .timeline-desc {
+    font-size: 1.1rem;
   }
 }
